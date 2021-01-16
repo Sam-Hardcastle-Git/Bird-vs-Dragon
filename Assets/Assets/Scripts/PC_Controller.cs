@@ -3,18 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PC_Controller : MonoBehaviour
-{
-    #region variables
-
-    //the speed the playable character moves forward at
-    private float speed = 5;
-
-    //the length of time the boost powerup lasts for
-    private float boost_timer = 2;
-
-    #endregion variables
-
-    #region functions
+{       
+    private float speed = 5;   
+    private float boostTimer = 2; 
+    
     void Update ()
     {
         Fly();
@@ -24,7 +16,7 @@ public class PC_Controller : MonoBehaviour
         {
             BoostSpeedEffectWearsOff();
         }
-	}
+    }
 
     private void Fly()
     {
@@ -124,17 +116,16 @@ public class PC_Controller : MonoBehaviour
     private void BoostSpeedEffectWearsOff()
     {
         //decrease boost timer
-        boost_timer -= 1 * Time.deltaTime;
+        boostTimer -= 1 * Time.deltaTime;
 
         //if the boost timer runs out, the effects of the boost wear off
-        if(boost_timer <= 0)
+        if(boostTimer <= 0)
         {
             //return speed to normal
             speed = 5;
 
             //boost timer is reset
-            boost_timer = 1;
+            boostTimer = 1;
         }
     }
-    #endregion functions
 }

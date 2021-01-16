@@ -9,7 +9,7 @@ public class Dragon_Controller : MonoBehaviour
     private float speed = 8;
 
     //the transform of the Playable Character
-    private Transform Bird;
+    private Transform bird;
 
     #endregion variables
 
@@ -17,7 +17,7 @@ public class Dragon_Controller : MonoBehaviour
     void Start()
     {
         //find the Playable Character from the hierarchy
-        Bird = GameObject.Find("Bird").transform;
+        bird = GameObject.Find("Bird").transform;
     }
 
     void Update()
@@ -31,7 +31,7 @@ public class Dragon_Controller : MonoBehaviour
         transform.position += transform.forward * Time.deltaTime * speed;
 
         //constantly face the Playable Character
-        transform.LookAt(Bird);
+        transform.LookAt(bird);
     }
 
     #endregion functions

@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
-{
-    #region variables
-
+{   
     //the current score value
     public int score = 0;
 
@@ -17,11 +15,8 @@ public class ScoreManager : MonoBehaviour
     private Finish finish;
 
     //a reference to the level manager class
-    LevelManager levelManager;
+    private LevelManager levelManager;
 
-    #endregion variables
-
-    #region functions
     void Start()
     {
         //find the Finish GameObject
@@ -70,7 +65,4 @@ public class ScoreManager : MonoBehaviour
         }
         #endregion pass score into the final scene and set high score when the score exceeds the current high score
     }
-
-    #endregion functions
-
 }

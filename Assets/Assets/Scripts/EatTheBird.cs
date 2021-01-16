@@ -5,7 +5,7 @@ using UnityEngine;
 public class EatTheBird : MonoBehaviour
 {
     //a reference to the level manager class
-    LevelManager levelManager;
+    private LevelManager levelManager;
 
     void Start()
     {

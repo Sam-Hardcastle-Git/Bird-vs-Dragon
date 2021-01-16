@@ -13,11 +13,9 @@ public class CameraFollows : MonoBehaviour
     public float zSpacing;
 	
 	// Update is called once per frame
-	void Update ()
+    void Update ()
     {
         //set the transform of this camera to the x,y and z co-ordinates of the camera, plus offset
         transform.position = new Vector3(target.position.x + xSpacing, target.position.y + ySpacing, target.position.z + zSpacing);
-	}
-
-
+    }
 }

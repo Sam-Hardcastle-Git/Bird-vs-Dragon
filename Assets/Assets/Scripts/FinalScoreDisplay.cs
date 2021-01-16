@@ -5,22 +5,14 @@ using UnityEngine.UI;
 
 public class FinalScoreDisplay : MonoBehaviour
 {
-    #region variables
-    //final score
+    //scores
     public int finalScore;
-
-    //final score text
-    public Text finalScoreText;
-
-    //high score
     public int highScore;
 
-    //high score text
+    //texts
+    public Text finalScoreText;
     public Text highScoreText;
-
-    #endregion variables
-
-    #region functions
+ 
     void Start()
     {
         UpdateTheScore();
@@ -35,6 +27,5 @@ public class FinalScoreDisplay : MonoBehaviour
         //Display scores
         highScoreText.text = "High Score: " + highScore.ToString();
         finalScoreText.text = "Your Score: " + finalScore.ToString();
-    }
-    #endregion functions
+    }    
 }
